@@ -11,18 +11,18 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #000;
+            background-color: #000; /* Black background */
         }
 
         img {
             max-width: 100%;
             height: auto;
-            border: 2px solid #fff;
+            border: 2px solid #fff; /* White border */
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
 
         audio {
-            display: block;
+            display: none; /* Hide the audio controls */
         }
     </style>
 </head>
@@ -32,10 +32,21 @@
     <img src="IMG_2514.PNG" alt="birdie">
 
     <!-- Background Music -->
-    <audio id="background-music" controls autoplay>
+    <audio id="background-music" autoplay>
         <source src="percm.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
+
+    <script>
+        // Attempt to play audio with JavaScript if needed for autoplay restrictions
+        const audio = document.getElementById('background-music');
+        audio.play().then(() => {
+            // Optionally, unmute after successful play
+            audio.muted = false;
+        }).catch(error => {
+            console.log("Autoplay failed:", error);
+        });
+    </script>
 
 </body>
 </html>
