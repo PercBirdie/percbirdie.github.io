@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
+    <title>Perc Birdie</title>
     <style>
         body {
             display: flex;
@@ -17,7 +17,7 @@
         img {
             max-width: 100%;
             height: auto;
-            border: 2px solid #fff; /* White border to stand out on black */
+            border: 2px solid #fff; /* White border */
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
 
@@ -32,10 +32,21 @@
     <img src="P22.jpg" alt="Simple Image">
 
     <!-- Background Music -->
-    <audio autoplay loop>
+    <audio id="background-music" autoplay loop>
         <source src="percm.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
+    <script>
+        // Attempt to play audio with JavaScript in case of autoplay restrictions
+        const audio = document.getElementById('background-music');
+        audio.muted = true;
+        audio.play().then(() => {
+            audio.muted = false; // Unmute once autoplay starts
+        }).catch(error => {
+            console.log("Autoplay failed:", error);
+        });
+    </script>
 
 </body>
 </html>
