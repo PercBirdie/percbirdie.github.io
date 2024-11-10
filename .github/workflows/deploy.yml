@@ -6,8 +6,8 @@ on:
       - main
 
 permissions:
-  contents: write  # For repository content
-  id-token: write  # Ensure this permission is explicitly granted
+  id-token: write  # Ensure this permission is granted
+  contents: write  # Allow write access to contents
 
 jobs:
   deploy:
@@ -21,5 +21,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .  # The root directory if your site files are in the root
-          publish_branch: gh-pages  # Target branch for GitHub Pages
+          publish_dir: .  # Your publish directory
+          publish_branch: gh-pages
+          create_orphan: true
