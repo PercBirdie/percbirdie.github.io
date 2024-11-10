@@ -11,18 +11,18 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #000; /* Black background */
+            background-color: #000;
         }
 
         img {
             max-width: 100%;
             height: auto;
-            border: 2px solid #fff; /* White border */
+            border: 2px solid #fff;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
 
         audio {
-            display: none; /* Hide the audio player */
+            display: block;
         }
     </style>
 </head>
@@ -36,17 +36,6 @@
         <source src="percm.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
-
-    <script>
-        // Attempt to play audio with JavaScript in case of autoplay restrictions
-        const audio = document.getElementById('background-music');
-        audio.play().then(() => {
-            // Optionally, unmute if desired after successful play
-            audio.muted = false;
-        }).catch(error => {
-            console.log("Autoplay failed:", error);
-        });
-    </script>
 
 </body>
 </html>
