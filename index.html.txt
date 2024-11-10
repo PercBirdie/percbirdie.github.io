@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #fff; /* White border to stand out on black */
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        audio {
+            display: none; /* Hide the audio player */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Image -->
+    <img src="P22.jpg" alt="Simple Image">
+
+    <!-- Background Music -->
+    <audio autoplay loop>
+        <source src="Battle Against a Machine - MOTHER 1+2 (MOTHER 2) [UefXg304ezk].webm" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+</html>
