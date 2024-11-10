@@ -32,17 +32,16 @@
     <img src="IMG_2514.PNG" alt="birdie">
 
     <!-- Background Music -->
-    <audio id="background-music" autoplay>
+    <audio id="background-music" autoplay muted>
         <source src="percm.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
 
     <script>
-        // Attempt to play audio with JavaScript if needed for autoplay restrictions
+        // Attempt to unmute the audio once it starts playing
         const audio = document.getElementById('background-music');
         audio.play().then(() => {
-            // Optionally, unmute after successful play
-            audio.muted = false;
+            audio.muted = false; // Unmute after successful autoplay
         }).catch(error => {
             console.log("Autoplay failed:", error);
         });
