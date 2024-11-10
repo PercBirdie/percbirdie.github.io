@@ -6,8 +6,8 @@ on:
       - main
 
 permissions:
-  id-token: write
-  contents: write # Allow write access to push changes
+  contents: write  # For repository content
+  id-token: write  # Ensure this permission is explicitly granted
 
 jobs:
   deploy:
